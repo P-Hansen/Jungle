@@ -1,8 +1,33 @@
 <h1>Admin Categories</h1>
 <div class="well">
-    <form action="/somepath" method="post">
-        <input type="text" name="name">
-        <input type="submit" value="Create Category">
-    </form>
-    <p><% p @categories %></p>
+    <br>
+    <p>there are currently <%= @category_count %> categories:</p>
+    <tbody>
+        <% @category_names.each do |category| %>
+            <%= category.name %><br>
+        <% end %>
+    </tbody>
+    <br>
+    <section>
+        <%= form_for [:admin, @category] do |form| %>
+
+            <% if form.object.errors.any? %>
+            <div class="alert alert-danger">
+                <strong>The following errors prevented saving:</strong>
+                <ul>
+                <% form.object.errors.full_messages.each do |error| %>
+                    <li><%= error %></li>
+                <% end %>
+                </ul>
+            </div>
+        <% end %>
+
+        <div class="form-group">
+            <%= form.label :name %>
+            <%= form.text_field :name, class: 'form-control' %>
+        </div>
+
+        <%= form.submit 'Create Category', class: 'btn btn-primary' %>
+        <% end %>
+    </section>
 </div>
