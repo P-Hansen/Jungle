@@ -35,9 +35,15 @@ RSpec.describe User, type: :model do
       expect(@user).to be_valid
     end
 
-    it "can create a new user with a lastname" do
+    it "can't create a new user with an invalid lastname" do
       @user.last_name = ""
       expect(@user).not_to be_valid
+    end
+
+    it "can't create a new user with a password below 5 char" do
+      @user.password = "aaa"
+      @user.password_confirmation = "aaa"
+      expect(@user.save).to eq false
     end
 
     it "fails when the same email is already in db" do
