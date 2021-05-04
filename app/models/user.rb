@@ -6,5 +6,9 @@ class User < ActiveRecord::Base
     # receive the form and create a user in our database using the data given to us by the user.
     # get '/signup' => 'users#new'
     # post '/users' => 'users#create'
+    validates :name, presence: true
+    validates :last_name, presence: true
+    validates :email, presence: true, :uniqueness => { :case_sensitive => false }
+    validates :password_digest, presence: {on: create}, length: { minimum: 5 }
 
 end
