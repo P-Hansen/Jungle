@@ -25,6 +25,7 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
       sleep(1)
       # DEBUG
       save_screenshot 'test_2.png'
+      expect(page).to have_text 'Name', count: 1
     end
 
 end
