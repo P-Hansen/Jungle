@@ -2,15 +2,6 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   describe 'Validations' do
-
-    # create_table "users", force: :cascade do |t|
-    #   t.string   "name"
-    #   t.string   "email"
-    #   t.string   "password_digest"
-    #   t.datetime "created_at",      null: false
-    #   t.datetime "updated_at",      null: false
-    #   t.string   "last_name"
-    # end
     before :each do
         @user = User.new(
         name: "egg",
@@ -69,6 +60,24 @@ RSpec.describe User, type: :model do
             )
         expect(@user2.save).to eq false
       end
+
+  end
+
+  describe '.authenticate_with_credentials' do
+    before :each do
+        @user = User.new(
+          name: "egg",
+          last_name: "eggerson",
+          email: "egg@eggmail.com",
+          password: "password",
+          password_confirmation: "password"
+        )
+    end
+
+    it "should return the user with the right password" do
+      authenticated = @user.authenticate_with_credentials("egg@eggmail.com", "password")
+      expect(authenticated).to eq @user
+    end
 
   end
 end
