@@ -2,6 +2,12 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+# Screen Shots
+
+!["GIF add to cart"](https://github.com/P-Hansen/Jungle/blob/master/public/pics/add-to-cart.gif?raw=true)
+!["GIF payment"](https://github.com/P-Hansen/Jungle/blob/master/public/pics/payment.gif?raw=true)
+!["GIF admin creating new product"](https://github.com/P-Hansen/Jungle/blob/master/public/pics/create-product.gif?raw=true)
+
 ## Additional Steps for Apple M1 Machines
 
 1. Make sure that you are runnning Ruby 2.6.6 (`ruby -v`)
