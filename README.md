@@ -1,12 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
-
-# Screen Shots
-
-!["GIF add to cart"](https://github.com/P-Hansen/Jungle/blob/master/public/pics/add-to-cart.gif?raw=true)
-!["GIF payment"](https://github.com/P-Hansen/Jungle/blob/master/public/pics/payment.gif?raw=true)
-!["GIF admin creating new product"](https://github.com/P-Hansen/Jungle/blob/master/public/pics/create-product.gif?raw=true)
+A mini e-commerce application built with Rails 4.2 for purposes of learning Rails by example. Additional features added to base site during course work at lighthouse labs.
 
 ## Additional Steps for Apple M1 Machines
 
@@ -25,6 +19,19 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 6. Sign up for a Stripe account
 7. Put Stripe (test) keys into appropriate .env vars
 8. Run `bin/rails s -b 0.0.0.0` to start the server
+
+## Screen Shots
+
+
+!["GIF add to cart"](https://github.com/P-Hansen/Jungle/blob/master/public/pics/add-to-cart.gif?raw=true)
+
+
+!["GIF payment"](https://github.com/P-Hansen/Jungle/blob/master/public/pics/payment.gif?raw=true)
+
+
+!["GIF admin creating new product"](https://github.com/P-Hansen/Jungle/blob/master/public/pics/create-product.gif?raw=true)
+
+
 
 ## Stripe Testing
 
